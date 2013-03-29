@@ -16,8 +16,7 @@ SRC_FILES = \
 	DriverImpl/*.cpp\
 	Formats/*.cpp	\
 	Include/*.cpp	\
-	Sensor/*.cpp	\
-	../../../ThirdParty/LibJPEG/*.c
+	Sensor/*.cpp
 
 
 ifeq ("$(OSTYPE)","Darwin")
@@ -30,7 +29,7 @@ LIB_NAME = PS1080
 
 LIB_DIRS += ../../../ThirdParty/PSCommon/XnLib/Bin/$(PLATFORM)-$(CFG)
 LIB_DIRS += $(BIN_DIR)/$(PLATFORM)-$(CFG)
-USED_LIBS = XnLib dl pthread DepthUtils
+USED_LIBS = XnLib dl pthread DepthUtils jpeg
 ifneq ("$(OSTYPE)","Darwin")
         USED_LIBS += rt usb-1.0 udev
 else
