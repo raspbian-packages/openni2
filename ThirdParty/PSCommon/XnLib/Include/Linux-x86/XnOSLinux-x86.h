@@ -79,7 +79,7 @@ typedef	void* XN_LIB_HANDLE;
 #define XN_SHARED_LIBRARY_PREFIX "lib"
 
 /** A string that specifies the postfix of shared library files. */ 
-#define XN_SHARED_LIBRARY_POSTFIX ".so"
+#define XN_SHARED_LIBRARY_POSTFIX ".so.0"
 
 //---------------------------------------------------------------------------
 // Threads
