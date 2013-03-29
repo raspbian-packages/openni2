@@ -23,7 +23,7 @@
 #include <XnLog.h>
 #include <XnOSCpp.h>
 
-static const char* ONI_CONFIGURATION_FILE = "OpenNI.ini";
+static const char* ONI_CONFIGURATION_FILE = "/etc/openni2/OpenNI.ini";
 static const char* ONI_DEFAULT_DRIVERS_REPOSITORY = "OpenNI2" XN_FILE_DIR_SEP "Drivers";
 
 #define XN_MASK_ONI_CONTEXT "OniContext"
