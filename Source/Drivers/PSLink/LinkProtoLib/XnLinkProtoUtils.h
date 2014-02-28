@@ -15,7 +15,7 @@
 #define XN_MASK_LINK "xnLink"
 
 #ifndef XN_COMPILER_ASSERT
-#define XN_COMPILER_ASSERT(x) typedef int compileAssert[x ? 1 : -1]
+#define XN_COMPILER_ASSERT(x) typedef int compileAssert[x ? 1 : -1] __attribute__((unused))
 #endif
 
 template <typename T>
