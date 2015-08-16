@@ -73,7 +73,7 @@ XN_C_API XnStatus XN_C_DECL xnRegisterErrorCodeMessages(XnUInt16 nGroup, XnUInt1
 /** Marks the end of a message map. */
 #define XN_STATUS_MESSAGE_MAP_END_FROM(group, first)	\
 	};													\
-	static XnStatus s_##group##first##_result = xnRegisterErrorCodeMessages(group, first, sizeof(_XN_ERROR_GROUP_NAME(group, first)) / sizeof(XnErrorCodeData), _XN_ERROR_GROUP_NAME(group, first));
+	static XnStatus s_##group##first##_result __attribute__ ((unused)) = xnRegisterErrorCodeMessages(group, first, sizeof(_XN_ERROR_GROUP_NAME(group, first)) / sizeof(XnErrorCodeData), _XN_ERROR_GROUP_NAME(group, first));
 
 #define XN_STATUS_REGISTER
 
