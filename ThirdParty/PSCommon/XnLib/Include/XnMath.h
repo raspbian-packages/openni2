@@ -155,15 +155,15 @@ namespace xnl
 #endif
 		static const XnFloat ONE_THIRD = (XnFloat)(1.0f/3.0f);
 		static const XnFloat ONE_SIXTH = (XnFloat)(1.0f/6.0f);
-		static const XnFloat ROOT_TWO = (XnFloat)Sqrt(2.0f);
-		static const XnFloat ROOT_THREE = (XnFloat)Sqrt(3.0f);
+		static const XnFloat ROOT_TWO __attribute__ ((unused)) = (XnFloat)Sqrt(2.0f);
+		static const XnFloat ROOT_THREE __attribute__ ((unused)) = (XnFloat)Sqrt(3.0f);
 		static const XnFloat PI = (XnFloat)M_PI;
 		static const XnFloat HALF_PI = (XnFloat)(0.5f*M_PI);
 		static const XnFloat TWO_PI = (XnFloat)(2.0f*M_PI);
-		static const XnFloat ROOT_TWO_PI = (XnFloat)Sqrt(2.0f*M_PI);
+		static const XnFloat ROOT_TWO_PI __attribute__ ((unused)) = (XnFloat)Sqrt(2.0f*M_PI);
 		static const XnFloat DTR = (XnFloat)(M_PI / 180.0f);
 		static const XnFloat RTD = (XnFloat)(180.0f / M_PI);
-		static const XnFloat PHI = (XnFloat)((-1.0f + Sqrt(5.0f)) / 2.0f);
+		static const XnFloat PHI __attribute__ ((unused)) = (XnFloat)((-1.0f + Sqrt(5.0f)) / 2.0f);
 
 	} // Math
 } // xnl
