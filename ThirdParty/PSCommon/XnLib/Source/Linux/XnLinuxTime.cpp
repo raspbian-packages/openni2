@@ -30,7 +30,7 @@ XnOSTimer g_xnOSHighResGlobalTimer;
 bool g_xnOSInitialized = false;
 
 XnStatus xnOSTimeInit();
-static XnStatus g_initalizeStatus = xnOSTimeInit();
+static XnStatus g_initalizeStatus __attribute__ ((unused)) = xnOSTimeInit();
 
 //---------------------------------------------------------------------------
 // Macros
