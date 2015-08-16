@@ -44,7 +44,7 @@ typedef xnl::Hash<XnUInt16, XnStatusHash*> XnGroupsHash;
 static XnGroupsHash* g_pErrorGroups = NULL;
 
 static XnErrorCodeData s_OK_Data = { XN_STATUS_OK, XN_STRINGIFY(XN_STATUS_OK), "OK" };
-static XnStatus s_XN_OK_result = xnRegisterErrorCodeMessages(0, 0, 1, &s_OK_Data);
+static XnStatus s_XN_OK_result __attribute__ ((unused)) = xnRegisterErrorCodeMessages(0, 0, 1, &s_OK_Data);
 
 //---------------------------------------------------------------------------
 // Code
