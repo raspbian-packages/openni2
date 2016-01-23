@@ -77,7 +77,7 @@ glh_linear.h
 #define     GLH_EPSILON         GLH_REAL(10e-6)
 #define     GLH_PI              GLH_REAL(3.1415926535897932384626433832795)    
 
-#define     equivalent(a,b)     (((a < b + GLH_EPSILON) && (a > b - GLH_EPSILON)) ? true : false)
+#define     glh_equivalent(a,b)     (((a < b + GLH_EPSILON) && (a > b - GLH_EPSILON)) ? true : false)
 
 namespace glh
 {
@@ -225,7 +225,7 @@ namespace glh
 		for(int i = 0; i < N; i++)
 			if(v1.v[i] != v2.v[i])
 				return false;
-			return true;
+		return true;
 	}
 	
 	template <int N, class T> inline
@@ -633,7 +633,7 @@ namespace glh
 			scp[i] = real(fabs(s[i][0]));
 			for(j=1;j<4;j++)
 				if(real(fabs(s[i][j])) > scp[i]) scp[i] = real(fabs(s[i][j]));
-				if(scp[i] == 0.0) return minv; // singular matrix!
+			if(scp[i] == 0.0) return minv; // singular matrix!
 		}
 		
 		int pivot_to;
@@ -647,26 +647,26 @@ namespace glh
 			for(p=i+1;p<4;p++)
 				if(real(fabs(s[p][i]/scp[p])) > scp_max)
 				{ scp_max = real(fabs(s[p][i]/scp[p])); pivot_to = p; }
-				// Pivot if necessary
-				if(pivot_to != i)
-				{
-					tmprow = s[i];
-					s[i] = s[pivot_to];
-					s[pivot_to] = tmprow;
-					real tmpscp;
-					tmpscp = scp[i];
-					scp[i] = scp[pivot_to];
-					scp[pivot_to] = tmpscp;
-				}
-				
-				real mji;
-				// perform gaussian elimination
-				for(j=i+1;j<4;j++)
-				{
-					mji = s[j][i]/s[i][i];
-					s[j][i] = 0.0;
-					for(jj=i+1;jj<8;jj++)
-						s[j][jj] -= mji*s[i][jj];
+			// Pivot if necessary
+			if(pivot_to != i)
+			{
+				tmprow = s[i];
+				s[i] = s[pivot_to];
+				s[pivot_to] = tmprow;
+				real tmpscp;
+				tmpscp = scp[i];
+				scp[i] = scp[pivot_to];
+				scp[pivot_to] = tmpscp;
+			}
+
+			real mji;
+			// perform gaussian elimination
+			for(j=i+1;j<4;j++)
+			{
+				mji = s[j][i]/s[i][i];
+				s[j][i] = 0.0;
+				for(jj=i+1;jj<8;jj++)
+					s[j][jj] -= mji*s[i][jj];
 				}
 		}
 		if(s[3][3] == 0.0) return minv; // singular matrix!
@@ -702,7 +702,7 @@ namespace glh
 			for(j=0;j<4;j++)
 				minv(i,j) = s[i][j+4] / s[i][i];
 			
-			return minv;
+		return minv;
 	}
     
     
@@ -1093,7 +1093,7 @@ namespace glh
 
         real norm = q[0] * q[0] + q[1] * q[1] + q[2] * q[2] + q[3] * q[3];
 
-        s = (equivalent(norm,GLH_ZERO)) ? GLH_ZERO : ( GLH_TWO / norm );
+        s = (glh_equivalent(norm,GLH_ZERO)) ? GLH_ZERO : ( GLH_TWO / norm );
 
         xs = q[0] * s;
         ys = q[1] * s;
@@ -1194,7 +1194,7 @@ namespace glh
             theta *= real(0.5);
             real sin_theta = real(sin(theta));
 
-            if (!equivalent(sqnorm,GLH_ONE)) 
+            if (!glh_equivalent(sqnorm,GLH_ONE)) 
               sin_theta /= real(sqrt(sqnorm));
             x = sin_theta * axis.v[0];
             y = sin_theta * axis.v[1];
@@ -1216,14 +1216,14 @@ namespace glh
 
         alpha = p1.dot(p2);
 
-        if(equivalent(alpha,GLH_ONE))
+        if(glh_equivalent(alpha,GLH_ONE))
         { 
             *this = identity(); 
             return *this; 
         }
 
         // ensures that the anti-parallel case leads to a positive dot
-        if(equivalent(alpha,-GLH_ONE))
+        if(glh_equivalent(alpha,-GLH_ONE))
         {
             vec3 v;
 
@@ -1280,7 +1280,7 @@ namespace glh
     void normalize()
     {
         real rnorm = GLH_ONE / real(sqrt(w * w + x * x + y * y + z * z));
-        if (equivalent(rnorm, GLH_ZERO))
+        if (glh_equivalent(rnorm, GLH_ZERO))
             return;
         x *= rnorm;
         y *= rnorm;
@@ -1439,10 +1439,10 @@ namespace glh
     inline
     bool operator == ( const quaternion & q1, const quaternion & q2 )
     {
-        return (equivalent(q1.x, q2.x) &&
-		        equivalent(q1.y, q2.y) &&
-		        equivalent(q1.z, q2.z) &&
-		        equivalent(q1.w, q2.w) );
+        return (glh_equivalent(q1.x, q2.x) &&
+		        glh_equivalent(q1.y, q2.y) &&
+		        glh_equivalent(q1.z, q2.z) &&
+		        glh_equivalent(q1.w, q2.w) );
     }
 
     inline
