@@ -26,6 +26,8 @@
 #include "XnFormats.h"
 #include <XnOS.h>
 #include <XnLog.h>
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Warray-bounds"
 
 //---------------------------------------------------------------------------
 // Defines
@@ -240,3 +242,4 @@ XnStatus XnFormatsMirrorPixelData(OniPixelFormat nOutputFormat, XnUChar* pBuffer
 		return XN_STATUS_ERROR;
 	}
 }
+#pragma GCC diagnostic pop
