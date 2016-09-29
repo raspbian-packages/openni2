@@ -1,0 +1,60 @@
+Description: Force PSCommon platform to Armv6l
+Author: Peter Michael Green <plugwash@raspbian.org>
+
+Index: openni2-2.2.0.33+dfsg/ThirdParty/PSCommon/BuildSystem/Platform.Arm
+===================================================================
+--- openni2-2.2.0.33+dfsg.orig/ThirdParty/PSCommon/BuildSystem/Platform.Arm
++++ openni2-2.2.0.33+dfsg/ThirdParty/PSCommon/BuildSystem/Platform.Arm
+@@ -4,7 +4,7 @@ export GLUT_SUPPORTED=1
+ ifeq "$(CFG)" "Release"
+ 
+     # Hardware specifying flags
+-    CFLAGS += -Wno-unused-local-typedefs -march=armv7-a -mtune=cortex-a9 -mfpu=neon #-mfloat-abi=softfp #-mcpu=cortex-a8
++    CFLAGS += -Wno-unused-local-typedefs #-march=armv7-a #-mtune=cortex-a9 #-mfpu=neon #-mfloat-abi=softfp #-mcpu=cortex-a8
+ 
+     # Optimization level, minus currently buggy optimizing methods (which break bit-exact)
+     CFLAGS += -O3 -fno-tree-pre -fno-strict-aliasing
+Index: openni2-2.2.0.33+dfsg/ThirdParty/PSCommon/BuildSystem/CommonDefs.mak
+===================================================================
+--- openni2-2.2.0.33+dfsg.orig/ThirdParty/PSCommon/BuildSystem/CommonDefs.mak
++++ openni2-2.2.0.33+dfsg/ThirdParty/PSCommon/BuildSystem/CommonDefs.mak
+@@ -6,23 +6,23 @@ ifndef CFG
+     CFG = Release
+ endif
+ 
+-# find out the platform on which we're running
+-MACHINE = $(shell uname -m)
+-ifneq (,$(findstring x86_64,$(MACHINE)))
+-	HOST_PLATFORM = x64
+-else ifneq (,$(findstring x86,$(MACHINE)))
+-	HOST_PLATFORM = x86
+-else ifneq (,$(findstring i686,$(MACHINE)))
+-	HOST_PLATFORM = x86
+-else ifneq (,$(findstring i386,$(MACHINE)))
+-	HOST_PLATFORM = x86
+-else ifneq (,$(findstring armv6l,$(MACHINE)))
++## find out the platform on which we're running
++#MACHINE = $(shell uname -m)
++#ifneq (,$(findstring x86_64,$(MACHINE)))
++#	HOST_PLATFORM = x64
++#else ifneq (,$(findstring x86,$(MACHINE)))
++#	HOST_PLATFORM = x86
++#else ifneq (,$(findstring i686,$(MACHINE)))
++#	HOST_PLATFORM = x86
++#else ifneq (,$(findstring i386,$(MACHINE)))
++#	HOST_PLATFORM = x86
++#else ifneq (,$(findstring armv6l,$(MACHINE)))
+ 	HOST_PLATFORM = Armv6l
+-else ifneq (,$(findstring arm,$(MACHINE)))
+-	HOST_PLATFORM = Arm
+-else
+-	HOST_PLATFORM = generic
+-endif
++#else ifneq (,$(findstring arm,$(MACHINE)))
++#	HOST_PLATFORM = Arm
++#else
++#	HOST_PLATFORM = generic
++#endif
+ 
+ # now check if this is a cross-compilation or not
+ ifeq "$(PLATFORM)" ""
