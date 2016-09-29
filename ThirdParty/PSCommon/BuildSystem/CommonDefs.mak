@@ -6,23 +6,23 @@ ifndef CFG
     CFG = Release
 endif
 
-# find out the platform on which we're running
-MACHINE = $(shell uname -m)
-ifneq (,$(findstring x86_64,$(MACHINE)))
-	HOST_PLATFORM = x64
-else ifneq (,$(findstring x86,$(MACHINE)))
-	HOST_PLATFORM = x86
-else ifneq (,$(findstring i686,$(MACHINE)))
-	HOST_PLATFORM = x86
-else ifneq (,$(findstring i386,$(MACHINE)))
-	HOST_PLATFORM = x86
-else ifneq (,$(findstring armv6l,$(MACHINE)))
+## find out the platform on which we're running
+#MACHINE = $(shell uname -m)
+#ifneq (,$(findstring x86_64,$(MACHINE)))
+#	HOST_PLATFORM = x64
+#else ifneq (,$(findstring x86,$(MACHINE)))
+#	HOST_PLATFORM = x86
+#else ifneq (,$(findstring i686,$(MACHINE)))
+#	HOST_PLATFORM = x86
+#else ifneq (,$(findstring i386,$(MACHINE)))
+#	HOST_PLATFORM = x86
+#else ifneq (,$(findstring armv6l,$(MACHINE)))
 	HOST_PLATFORM = Armv6l
-else ifneq (,$(findstring arm,$(MACHINE)))
-	HOST_PLATFORM = Arm
-else
-	HOST_PLATFORM = generic
-endif
+#else ifneq (,$(findstring arm,$(MACHINE)))
+#	HOST_PLATFORM = Arm
+#else
+#	HOST_PLATFORM = generic
+#endif
 
 # now check if this is a cross-compilation or not
 ifeq "$(PLATFORM)" ""
