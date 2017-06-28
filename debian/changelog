@@ -1,9 +1,23 @@
-openni2 (2.2.0.33+dfsg-7+rpi1) stretch-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-8+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 29 Sep 2016 18:49:48 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Wed, 28 Jun 2017 10:20:05 +0000
+
+openni2 (2.2.0.33+dfsg-8) unstable; urgency=medium
+
+  [ Hans-Christoph Steiner ]
+  * remove myself from Uploaders
+
+  [ Jochen Sprickerhof ]
+  * Remove Temp documentation to make package build reproducible
+  * Add patch for GCC7 (Closes: #853597)
+  * Remove Cosimo Alfarano from Uploaders (Closes: #846822)
+  * bump compat to 10 (no changes needed)
+  * Remove versioned dependencies
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Tue, 07 Feb 2017 18:40:17 +0100
 
 openni2 (2.2.0.33+dfsg-7) unstable; urgency=medium
 
