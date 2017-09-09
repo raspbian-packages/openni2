@@ -18,8 +18,6 @@ else ifneq (,$(findstring i386,$(MACHINE)))
 	HOST_PLATFORM = x86
 else ifneq (,$(findstring armv6l,$(MACHINE)))
 	HOST_PLATFORM = Armv6l
-else ifneq (,$(findstring arm,$(MACHINE)))
-	HOST_PLATFORM = Arm
 else
 	HOST_PLATFORM = generic
 endif
