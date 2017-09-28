@@ -1,9 +1,17 @@
-openni2 (2.2.0.33+dfsg-9+rpi1) buster-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-10+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Fri, 18 Aug 2017 17:42:31 +0000
+ -- Peter Michael Green <plugwash@raspbian.org>  Thu, 28 Sep 2017 00:02:30 +0000
+
+openni2 (2.2.0.33+dfsg-10) unstable; urgency=medium
+
+  * Add patch for arm.
+    Thanks to Adrian Bunk (Closes: #874220)
+  * Remove flags, not needed anymore
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sat, 09 Sep 2017 16:17:46 +0200
 
 openni2 (2.2.0.33+dfsg-9) unstable; urgency=medium
 

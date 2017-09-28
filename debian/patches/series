@@ -13,4 +13,5 @@
 0013-Fix-GCC6-compilation.patch
 0014-fix-format-overflow-for-GCC7.patch
 0015-Initialize-variable-for-gcc7.patch
+0016-Use-the-generic-platform-for-armel-armhf-NEON-is-not.patch
 9999-raspbian.patch

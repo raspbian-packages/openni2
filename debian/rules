@@ -1,8 +1,5 @@
 #!/usr/bin/make -f
 
-CFLAGS = -fno-stack-protector
-CXXFLAGS = -fno-stack-protector
-
 %:
 	dh $@ --buildsystem=makefile
 
