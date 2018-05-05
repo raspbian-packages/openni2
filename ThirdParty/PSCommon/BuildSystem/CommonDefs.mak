@@ -21,7 +21,7 @@ else ifneq (,$(findstring armv6l,$(MACHINE)))
 else ifneq (,$(findstring arm,$(MACHINE)))
 	HOST_PLATFORM = Arm
 else
-	DUMMY:=$(error Can't determine host platform)
+	HOST_PLATFORM = generic
 endif
 
 # now check if this is a cross-compilation or not
