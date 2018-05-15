@@ -1,9 +1,29 @@
-openni2 (2.2.0.33+dfsg-10+rpi1) buster-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-11+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Peter Michael Green <plugwash@raspbian.org>  Thu, 28 Sep 2017 00:02:30 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Tue, 15 May 2018 06:49:20 +0000
+
+openni2 (2.2.0.33+dfsg-11) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+  [ Felipe Sateler ]
+  * Change maintainer address to debian-multimedia@lists.debian.org
+
+  [ Jochen Sprickerhof ]
+  * Update Vcs URLs to salsa.d.o
+  * Move cleanup to d/clean
+  * Add R³
+  * http -> https
+  * Fix dh_clean
+  * Fix missing-notice-file-for-apache-license
+  * Bump policy and debhelper versions
+  * Don't build with -Werror (Closes: #897827)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sat, 05 May 2018 17:40:24 +0200
 
 openni2 (2.2.0.33+dfsg-10) unstable; urgency=medium
 

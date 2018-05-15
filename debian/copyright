@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: OpenNI2
 Upstream-Contact: OpenNI, http://www.openni.org/contact-us
 Source: https://github.com/occipital/openni2
