@@ -11,4 +11,5 @@
 0011-Mark-variables-unused.patch
 0012-generic-linux.patch
 0013-Fix-GCC6-compilation.patch
+0014-No-NEON.patch
 9999-raspbian.patch

@@ -1,9 +1,17 @@
-openni2 (2.2.0.33+dfsg-7+rpi1) stretch-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-7+rpi1+deb9u1) stretch-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 29 Sep 2016 18:49:48 +0000
+ -- Peter Michael green <plugwash@raspbian.org>  Sun, 17 Feb 2019 15:12:00 +0000
+
+openni2 (2.2.0.33+dfsg-7+deb9u1) stretch; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix armhf baseline violation and armel FTBFS caused by NEON usage.
+    (Closes: #874220)
+
+ -- Adrian Bunk <bunk@debian.org>  Tue, 13 Mar 2018 17:52:24 +0200
 
 openni2 (2.2.0.33+dfsg-7) unstable; urgency=medium
 
