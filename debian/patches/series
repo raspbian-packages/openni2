@@ -14,4 +14,5 @@
 0014-fix-format-overflow-for-GCC7.patch
 0015-Initialize-variable-for-gcc7.patch
 0016-Use-the-generic-platform-for-armel-armhf-NEON-is-not.patch
+0017-Port-to-Python-3.patch
 auto-2.2.0.33+dfsg-10+rpi1-5e23fdcb08db0ec628fffa42b44116ff344bb22e-1506557265

@@ -4,17 +4,16 @@ Section: libs
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Uploaders: Nobuhiro Iwamatsu <iwamatsu@debian.org>,
            Jochen Sprickerhof <jspricke@debian.org>
-Build-Depends: debhelper (>= 11),
-               debsums,
+Build-Depends: debhelper-compat (= 12),
                freeglut3-dev,
                libusb-1.0-0-dev,
-               python,
+               python3,
                doxygen,
                graphviz,
                libjpeg-dev,
                libudev-dev,
                default-jdk
-Standards-Version: 4.1.4
+Standards-Version: 4.4.0
 Rules-Requires-Root: no
 Homepage: https://structure.io/openni
 Vcs-Git: https://salsa.debian.org/multimedia-team/openni2.git
@@ -65,6 +64,7 @@ Description: headers for OpenNI 'Natural Interaction' frameworks
 Package: openni2-doc
 Section: doc
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Description: developer documentation for OpenNI frameworks
  OpenNI is a framework for getting data to support 'Natural Interaction',

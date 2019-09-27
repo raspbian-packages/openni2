@@ -1,9 +1,24 @@
-openni2 (2.2.0.33+dfsg-11+rpi1) buster-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-12+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Tue, 15 May 2018 06:49:20 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 27 Sep 2019 14:23:24 +0000
+
+openni2 (2.2.0.33+dfsg-12) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat
+
+  [ Jochen Sprickerhof ]
+  * Port to Python 3 (Closes: #937206)
+  * Bump policy version (no changes)
+  * Bump debhelper version
+  * Drop unused build dependency
+  * Add multiarch stuff
+  * add Salsa CI
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sat, 14 Sep 2019 10:36:50 +0200
 
 openni2 (2.2.0.33+dfsg-11) unstable; urgency=medium
 
