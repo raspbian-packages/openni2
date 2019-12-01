@@ -44,7 +44,6 @@ public:
 protected:
 	static const int ms_bufferSize = 1024;
 
-#if XN_PLATFORM == XN_PLATFORM_WIN32
 	struct SingleBuffer
 	{
 		SingleBuffer() : m_currentEnd(0)
@@ -57,11 +56,6 @@ protected:
 
 	xnl::Hash<XN_THREAD_ID, SingleBuffer*> m_buffers;
 	xnl::CriticalSection m_bufferLock;
-#else
-	typedef ErrorLogger SingleBuffer;
-	static XN_THREAD_STATIC char m_errorBuffer[ms_bufferSize];
-	static XN_THREAD_STATIC int m_currentEnd;
-#endif
 	SingleBuffer* getBuffer();
 private:
 	ErrorLogger();
