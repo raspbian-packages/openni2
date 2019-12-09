@@ -13,7 +13,7 @@ Build-Depends: debhelper-compat (= 12),
                libjpeg-dev,
                libudev-dev,
                default-jdk
-Standards-Version: 4.4.0
+Standards-Version: 4.4.1
 Rules-Requires-Root: no
 Homepage: https://structure.io/openni
 Vcs-Git: https://salsa.debian.org/multimedia-team/openni2.git

@@ -26,6 +26,7 @@
 #include <sys/time.h>
 #include <sys/resource.h>
 #include <XnLog.h>
+#include <signal.h>
 
 //---------------------------------------------------------------------------
 // Code
@@ -202,3 +203,7 @@ XN_C_API XnStatus xnOSGetCurrentThreadID(XN_THREAD_ID* pThreadID)
 	return (XN_STATUS_OK);
 }
 
+XN_C_API XnBool xnOSDoesThreadExistByID(XN_THREAD_ID threadId)
+{
+  return pthread_kill(threadId, 0) != ESRCH;
+}

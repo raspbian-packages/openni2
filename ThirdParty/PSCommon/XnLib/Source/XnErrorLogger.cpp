@@ -22,11 +22,6 @@
 
 namespace xnl
 {
-#if XN_PLATFORM != XN_PLATFORM_WIN32
-	XN_THREAD_STATIC char ErrorLogger::m_errorBuffer[ms_bufferSize] = "";
-	XN_THREAD_STATIC int ErrorLogger::m_currentEnd = 0;
-#endif
-
 	ErrorLogger& ErrorLogger::GetInstance()
 	{
 		static ErrorLogger el;
@@ -88,17 +83,14 @@ namespace xnl
 
 	ErrorLogger::~ErrorLogger()
 	{
-#if XN_PLATFORM == XN_PLATFORM_WIN32
 		while (!m_buffers.IsEmpty())
 		{
 			SingleBuffer* pBuffer = m_buffers.Begin()->Value();
 			XN_DELETE(pBuffer);
 			m_buffers.Remove(m_buffers.Begin());
 		}
-#endif
 	}
 
-#if XN_PLATFORM == XN_PLATFORM_WIN32
 	ErrorLogger::SingleBuffer* ErrorLogger::getBuffer()
 	{
 		m_bufferLock.Lock();
@@ -139,10 +131,4 @@ namespace xnl
 		m_bufferLock.Unlock();
 		return pNewBuffer;
 	}
-#else
-	ErrorLogger::SingleBuffer* ErrorLogger::getBuffer()
-	{
-		return this;
-	}
-#endif
 }

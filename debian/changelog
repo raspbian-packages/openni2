@@ -1,9 +1,20 @@
-openni2 (2.2.0.33+dfsg-12+rpi1) bullseye-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-13+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Fri, 27 Sep 2019 14:23:24 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Mon, 09 Dec 2019 07:09:29 +0000
+
+openni2 (2.2.0.33+dfsg-13) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1
+  * d/changelog: Deduplicate entries
+
+  [ Jochen Sprickerhof ]
+  * Add patch to reduce TLS consumption (Closes: #945878)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Mon, 02 Dec 2019 19:53:45 +0100
 
 openni2 (2.2.0.33+dfsg-12) unstable; urgency=medium
 
@@ -137,7 +148,6 @@ openni2 (2.1.0.4-1ubuntu1~1.gbp2a4158) UNRELEASED; urgency=low
   * Ignore eclipse projects
   * Some more ignores
   * Some ignores
-  * Refresh patches
   * Refresh patches
   * more refresh
 
