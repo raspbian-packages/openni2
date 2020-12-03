@@ -1,0 +1,81 @@
+Source: openni2
+Priority: optional
+Section: libs
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders: Nobuhiro Iwamatsu <iwamatsu@debian.org>,
+           Jochen Sprickerhof <jspricke@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               freeglut3-dev,
+               libusb-1.0-0-dev,
+               python3,
+               doxygen,
+               graphviz,
+               libjpeg-dev,
+               libudev-dev,
+               default-jdk
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: https://structure.io/openni
+Vcs-Git: https://salsa.debian.org/multimedia-team/openni2.git
+Vcs-Browser: https://salsa.debian.org/multimedia-team/openni2
+
+Package: libopenni2-0
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: framework for sensor-based 'Natural Interaction'
+ OpenNI2 is a framework for getting data to support 'Natural Interaction',
+ i.e. skeleton tracking, gesture tracking, and similar ways of getting data
+ from humans. OpenNI2 provides the interface for physical devices and for
+ middleware components. The API enables modules to be registered in the OpenNI2
+ framework, which then produce sensory data. OpenNI2 also allows selection of
+ different hardware and middleware modules.
+
+Package: openni2-utils
+Section: utils
+Architecture: any
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: debug and test utilities OpenNI2 framework
+ OpenNI2 is a framework for getting data to support 'Natural Interaction',
+ i.e. skeleton tracking, gesture tracking, and similar ways of getting data
+ from humans. OpenNI2 provides the interface for physical devices and for
+ middleware components. The API enables modules to be registered in the OpenNI2
+ framework, which then produce sensory data. OpenNI2 also allows selection of
+ different hardware and middleware modules.
+ .
+ This package provides a number of related utilities for debugging, testing,
+ and view the results of the sensor modules.
+
+Package: libopenni2-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         libopenni2-0 (= ${binary:Version})
+Suggests: openni2-doc
+Description: headers for OpenNI 'Natural Interaction' frameworks
+ OpenNI is a framework for getting data to support 'Natural Interaction',
+ i.e. skeleton tracking, gesture tracking, and similar ways of getting data
+ from humans. OpenNI provides the interface for physical devices and for
+ middleware components. The API enables modules to be registered in the OpenNI
+ framework, which then produce sensory data. OpenNI also allows selection of
+ different hardware and middleware modules.
+
+Package: openni2-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: developer documentation for OpenNI frameworks
+ OpenNI is a framework for getting data to support 'Natural Interaction',
+ i.e. skeleton tracking, gesture tracking, and similar ways of getting data
+ from humans. OpenNI provides the interface for physical devices and for
+ middleware components. The API enables modules to be registered in the OpenNI
+ framework, which then produce sensory data. OpenNI also allows selection of
+ different hardware and middleware modules.
+ .
+ This package provides developer documentation for developing using the OpenNI2
+ frameworks.
