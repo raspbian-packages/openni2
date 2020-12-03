@@ -1,0 +1,8 @@
+Source/Documentation/html/
+Source/Documentation/Temp/
+Source/Documentation/java/
+Bin/Intermediate/
+Bin/*-Release/
+ThirdParty/PSCommon/XnLib/Bin/*-Release/
+ThirdParty/PSCommon/XnLib/Bin/Intermediate/
+Source/Documentation/doxygen_sqlite3.db
