@@ -4,7 +4,7 @@
 	dh $@ --buildsystem=makefile
 
 override_dh_auto_build:
-	make ALLOW_WARNINGS=1
+	dh_auto_build -- ALLOW_WARNINGS=1
 	cd Source/Documentation && python3 ./Runme.py
 	cd Bin/*-Release/ && mv NiViewer NiViewer2
 

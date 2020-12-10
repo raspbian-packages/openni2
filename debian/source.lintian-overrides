@@ -1,3 +1,0 @@
-# this source code is not used at all, instead Debian's libusb is used
-openni2 source: outdated-autotools-helper-file ThirdParty/PSCommon/XnLib/ThirdParty/libusb-1.0.9-Android/config.sub 2010-09-11
-openni2 source: outdated-autotools-helper-file ThirdParty/PSCommon/XnLib/ThirdParty/libusb-1.0.9-Android/config.guess 2010-09-24

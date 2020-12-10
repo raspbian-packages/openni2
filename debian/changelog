@@ -1,9 +1,30 @@
-openni2 (2.2.0.33+dfsg-13+rpi1) bullseye-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-14+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Mon, 09 Dec 2019 07:09:29 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 10 Dec 2020 09:46:03 +0000
+
+openni2 (2.2.0.33+dfsg-14) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * debian/copyright: use spaces rather than tabs to start continuation lines.
+  * Move source package lintian overrides to debian/source.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Fix day-of-week for changelog entry 2.1.0.4-1.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Ahzo ]
+  * multi-archify the library (Closes: #975355)
+  * use dh_auto_build to properly support parallel builds
+
+  [ Jochen Sprickerhof ]
+  * Drop hard coded drivers patch patch
+  * Drop old lintian-overrides
+  * [lintian] Remove tabs from d/copyright
+  * bump policy version (no changes)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Thu, 03 Dec 2020 19:23:37 +0100
 
 openni2 (2.2.0.33+dfsg-13) unstable; urgency=medium
 
@@ -157,4 +178,4 @@ openni2 (2.1.0.4-1) unstable; urgency=low
 
   * Initial creation of debian package
 
- -- Hauke Wintjen <hwintjen@rimpl-consulting.de>  Tue, 14 Mar 2013 00:40:17 +0100
+ -- Hauke Wintjen <hwintjen@rimpl-consulting.de>  Thu, 14 Mar 2013 00:40:17 +0100
