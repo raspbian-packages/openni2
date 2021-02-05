@@ -1,0 +1,180 @@
+openni2 (2.2.0.33+dfsg-15) unstable; urgency=medium
+
+  * Add patch for Java 17 (Closes: #982019)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Fri, 05 Feb 2021 20:15:35 +0100
+
+openni2 (2.2.0.33+dfsg-14) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * debian/copyright: use spaces rather than tabs to start continuation lines.
+  * Move source package lintian overrides to debian/source.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Fix day-of-week for changelog entry 2.1.0.4-1.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Ahzo ]
+  * multi-archify the library (Closes: #975355)
+  * use dh_auto_build to properly support parallel builds
+
+  [ Jochen Sprickerhof ]
+  * Drop hard coded drivers patch patch
+  * Drop old lintian-overrides
+  * [lintian] Remove tabs from d/copyright
+  * bump policy version (no changes)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Thu, 03 Dec 2020 19:23:37 +0100
+
+openni2 (2.2.0.33+dfsg-13) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1
+  * d/changelog: Deduplicate entries
+
+  [ Jochen Sprickerhof ]
+  * Add patch to reduce TLS consumption (Closes: #945878)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Mon, 02 Dec 2019 19:53:45 +0100
+
+openni2 (2.2.0.33+dfsg-12) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat
+
+  [ Jochen Sprickerhof ]
+  * Port to Python 3 (Closes: #937206)
+  * Bump policy version (no changes)
+  * Bump debhelper version
+  * Drop unused build dependency
+  * Add multiarch stuff
+  * add Salsa CI
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sat, 14 Sep 2019 10:36:50 +0200
+
+openni2 (2.2.0.33+dfsg-11) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+  [ Felipe Sateler ]
+  * Change maintainer address to debian-multimedia@lists.debian.org
+
+  [ Jochen Sprickerhof ]
+  * Update Vcs URLs to salsa.d.o
+  * Move cleanup to d/clean
+  * Add R³
+  * http -> https
+  * Fix dh_clean
+  * Fix missing-notice-file-for-apache-license
+  * Bump policy and debhelper versions
+  * Don't build with -Werror (Closes: #897827)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sat, 05 May 2018 17:40:24 +0200
+
+openni2 (2.2.0.33+dfsg-10) unstable; urgency=medium
+
+  * Add patch for arm.
+    Thanks to Adrian Bunk (Closes: #874220)
+  * Remove flags, not needed anymore
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sat, 09 Sep 2017 16:17:46 +0200
+
+openni2 (2.2.0.33+dfsg-9) unstable; urgency=medium
+
+  * Add patch for GCC7 (Closes: #871157)
+  * Delete removed paragraphs from copyright
+  * Bump standards version (no changes needed)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Wed, 09 Aug 2017 08:40:32 +0200
+
+openni2 (2.2.0.33+dfsg-8) unstable; urgency=medium
+
+  [ Hans-Christoph Steiner ]
+  * remove myself from Uploaders
+
+  [ Jochen Sprickerhof ]
+  * Remove Temp documentation to make package build reproducible
+  * Add patch for GCC7 (Closes: #853597)
+  * Remove Cosimo Alfarano from Uploaders (Closes: #846822)
+  * bump compat to 10 (no changes needed)
+  * Remove versioned dependencies
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Tue, 07 Feb 2017 18:40:17 +0100
+
+openni2 (2.2.0.33+dfsg-7) unstable; urgency=medium
+
+  * Don't link plugins in pkg-config file
+  * Fix lintian warnings
+  * Add watch file
+  * Update my email address
+  * Bumped Standards-Version to 3.9.8, no changes needed.
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Mon, 12 Sep 2016 11:32:44 +0200
+
+openni2 (2.2.0.33+dfsg-6) unstable; urgency=medium
+
+  * Add gcc6 patch (Closes: #812056)
+
+ -- Jochen Sprickerhof <debian@jochen.sprickerhof.de>  Sat, 23 Jan 2016 16:56:31 +0100
+
+openni2 (2.2.0.33+dfsg-5) unstable; urgency=medium
+
+  * Add 0012-generic-linux.patch.
+    Thanks to Riku Voipio (Closes: #801123)
+
+ -- Jochen Sprickerhof <debian@jochen.sprickerhof.de>  Fri, 09 Oct 2015 22:34:31 +0200
+
+openni2 (2.2.0.33+dfsg-4) unstable; urgency=medium
+
+  * Add myself to Uploaders
+  * Fix Vcs-Git URL
+  * Fix Homepage (closes: #795276)
+
+ -- Jochen Sprickerhof <debian@jochen.sprickerhof.de>  Mon, 17 Aug 2015 12:14:36 +0200
+
+openni2 (2.2.0.33+dfsg-3) unstable; urgency=medium
+
+  * Properly fix unused variables
+
+ -- Jochen Sprickerhof <debian@jochen.sprickerhof.de>  Sun, 16 Aug 2015 10:10:00 +0200
+
+openni2 (2.2.0.33+dfsg-2) unstable; urgency=medium
+
+  * Fix compilation with GCC5
+  * Add ARMhf support.
+
+ -- Jochen Sprickerhof <debian@jochen.sprickerhof.de>  Sat, 15 Aug 2015 14:17:54 +0200
+
+openni2 (2.2.0.33+dfsg-1) unstable; urgency=low
+
+  [ Hauke Wintjen ]
+  * Merged upstream to 2.2.0.33
+  * Refresh patches
+
+  [ Jochen Sprickerhof ]
+  * Bump standards version
+  * Initial release. (Closes: #607160)
+  * Add more licenses
+  * Filter non dfsg free files in gbp.conf
+  * Imported Upstream version 2.2.0.33+dfsg
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Wed, 25 Mar 2015 10:49:04 -0400
+
+openni2 (2.1.0.4-1ubuntu1~1.gbp2a4158) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @2a4158ba551d1f7de2549afc4400bd4110641cce **
+
+  * Some ignores
+  * Ignore eclipse projects
+  * Some more ignores
+  * Some ignores
+  * Refresh patches
+  * more refresh
+
+ -- Hauke Wintjen <hwintjen@rimpl-consulting.de>  Fri, 29 Mar 2013 23:14:11 +0100
+
+openni2 (2.1.0.4-1) unstable; urgency=low
+
+  * Initial creation of debian package
+
+ -- Hauke Wintjen <hwintjen@rimpl-consulting.de>  Thu, 14 Mar 2013 00:40:17 +0100

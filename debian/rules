@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=makefile
+
+override_dh_auto_build:
+	dh_auto_build -- ALLOW_WARNINGS=1
+	cd Source/Documentation && python3 ./Runme.py
+	cd Bin/*-Release/ && mv NiViewer NiViewer2
+
+override_dh_shlibdeps:
+	dh_shlibdeps -- --ignore-missing-info
