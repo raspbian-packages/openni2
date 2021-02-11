@@ -1,9 +1,15 @@
-openni2 (2.2.0.33+dfsg-14+rpi1) bullseye-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-15+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 10 Dec 2020 09:46:03 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 11 Feb 2021 19:24:31 +0000
+
+openni2 (2.2.0.33+dfsg-15) unstable; urgency=medium
+
+  * Add patch for Java 17 (Closes: #982019)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Fri, 05 Feb 2021 20:15:35 +0100
 
 openni2 (2.2.0.33+dfsg-14) unstable; urgency=medium
 

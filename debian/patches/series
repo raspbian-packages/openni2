@@ -15,4 +15,5 @@
 0016-Use-the-generic-platform-for-armel-armhf-NEON-is-not.patch
 0017-Port-to-Python-3.patch
 0018-Don-t-allocate-m_errorBuffer-on-TLS.patch
+0018-Fix-javadoc-with-Java-17.patch
 auto-2.2.0.33+dfsg-10+rpi1-5e23fdcb08db0ec628fffa42b44116ff344bb22e-1506557265
