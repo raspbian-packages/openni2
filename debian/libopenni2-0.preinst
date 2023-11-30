@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# begin-remove-after: released:forky
+if test "$1" = upgrade; then
+	dpkg-divert --no-rename --package usr-is-merged --divert /lib/udev/rules.d/60-libopenni2-0.rules.usr-is-merged --add /lib/udev/rules.d/60-libopenni2-0.rules
+fi
+# end-remove-after
+
+#DEBHELPER#

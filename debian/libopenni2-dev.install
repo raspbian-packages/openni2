@@ -1,0 +1,4 @@
+Include/* usr/include/openni2/
+debian/libopenni2.pc usr/share/pkgconfig
+Bin/*-Release/libOpenNI2.so usr/lib/${DEB_HOST_MULTIARCH}
+Bin/*-Release/OpenNI2/Drivers/lib*.so usr/lib/${DEB_HOST_MULTIARCH}/OpenNI2/Drivers/
