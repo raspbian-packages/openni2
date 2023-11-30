@@ -1,0 +1,4 @@
+# begin-remove-after: released:forky
+# DEP17P7 mitigation
+diversion-for-unknown-file lib/udev/rules.d/60-libopenni2-0.rules [*]
+# end-remove-after

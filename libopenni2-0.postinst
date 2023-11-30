@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+# begin-remove-after: released:forky
+if test "$1" = configure && test "$DPKG_MAINTSCRIPT_PACKAGE_REFCOUNT" = "1" && test -n "$(dpkg-divert --list /lib/udev/rules.d/60-libopenni2-0.rules)"; then
+	rm -f /lib/udev/rules.d/60-libopenni2-0.rules.usr-is-merged
+	dpkg-divert --no-rename --package usr-is-merged --remove /lib/udev/rules.d/60-libopenni2-0.rules
+fi
+# end-remove-after
+
+#DEBHELPER#
