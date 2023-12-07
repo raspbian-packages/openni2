@@ -1,9 +1,28 @@
-openni2 (2.2.0.33+dfsg-15+rpi1) bullseye-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-17+rpi1) trixie-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 11 Feb 2021 19:24:31 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 07 Dec 2023 17:01:34 +0000
+
+openni2 (2.2.0.33+dfsg-17) unstable; urgency=medium
+
+  * upload to unstable
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Thu, 30 Nov 2023 07:00:56 +0100
+
+openni2 (2.2.0.33+dfsg-16) experimental; urgency=medium
+
+  [ Jochen Sprickerhof ]
+  * Drop gitlab-ci
+  * Switch watch to /tags
+  * Bump policy version (no changes)
+  * Switch to non transitional libglut-dev
+
+  [ Helmut Grohne ]
+  * Move files to /usr. (Closes: #1054411)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sun, 26 Nov 2023 09:01:52 +0100
 
 openni2 (2.2.0.33+dfsg-15) unstable; urgency=medium
 

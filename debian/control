@@ -5,15 +5,15 @@ Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Uploaders: Nobuhiro Iwamatsu <iwamatsu@debian.org>,
            Jochen Sprickerhof <jspricke@debian.org>
 Build-Depends: debhelper-compat (= 13),
-               freeglut3-dev,
+               libglut-dev,
                libusb-1.0-0-dev,
-               python3,
+               python3:any,
                doxygen,
                graphviz,
                libjpeg-dev,
                libudev-dev,
                default-jdk
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Rules-Requires-Root: no
 Homepage: https://structure.io/openni
 Vcs-Git: https://salsa.debian.org/multimedia-team/openni2.git
