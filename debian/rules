@@ -8,8 +8,5 @@ override_dh_auto_build:
 	cd Source/Documentation && python3 ./Runme.py
 	cd Bin/*-Release/ && mv NiViewer NiViewer2
 
-execute_after_dh_installudev:
-	set -e; if test -d debian/libopenni2-0/lib/udev/rules.d; then mv debian/libopenni2-0/lib/udev debian/libopenni2-0/usr/lib; fi
-
 override_dh_shlibdeps:
 	dh_shlibdeps -- --ignore-missing-info

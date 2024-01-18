@@ -1,9 +1,15 @@
-openni2 (2.2.0.33+dfsg-17+rpi1) trixie-staging; urgency=medium
+openni2 (2.2.0.33+dfsg-18+rpi1) trixie-staging; urgency=medium
 
   [changes brought forward from 2.2.0.33+dfsg-6+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Mon, 12 Sep 2016 22:39:36 +0000]
   * Force PSCommon platform to armv6l
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 07 Dec 2023 17:01:34 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 18 Jan 2024 20:57:52 +0000
+
+openni2 (2.2.0.33+dfsg-18) unstable; urgency=medium
+
+  * Remove old dh_installudev usrmerge workaround
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sun, 07 Jan 2024 12:01:43 +0100
 
 openni2 (2.2.0.33+dfsg-17) unstable; urgency=medium
 
